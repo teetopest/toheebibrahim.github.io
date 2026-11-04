@@ -9,17 +9,42 @@
   <meta property="og:description" content="Industrial mathematical modeling, control systems, scientific computing, and quantitative analysis." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#17343b" />
 
   <link rel="icon" href="./favicon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root {
+      --ink: #17343b;
+      --deep: #17343b;
+      --warm-ivory: #f6f2e9;
+      --paper: #fffdf8;
+      --sage: #eaf3ef;
+      --warm-border: #ddd6c9;
+      --coral: #e07a5f;
+    }
     html { scroll-behavior: smooth; }
-    body { font-feature-settings: "kern"; }
+    body {
+      background: var(--warm-ivory);
+      color: var(--ink);
+      font-feature-settings: "kern";
+    }
     section { scroll-margin-top: 4.75rem; }
     .eyebrow { letter-spacing: 0.14em; }
-    .card-lift { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
-    .card-lift:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -28px rgb(15 23 42 / 0.65); border-color: #94a3b8; }
+    .hero-surface { background: var(--deep); }
+    .sage-surface { background: var(--sage); }
+    .paper-surface { background: var(--paper); }
+    .warm-border { border-color: var(--warm-border); }
+    .soft-shadow { box-shadow: 0 22px 60px -42px rgb(23 52 59 / 0.6); }
+    .card-lift {
+      background: var(--paper);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+    .card-lift:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 45px -30px rgb(23 52 59 / 0.55);
+      border-color: #7aa69b;
+    }
     .timeline-item::before {
       content: "";
       position: absolute;
@@ -71,10 +96,10 @@
   </script>
 </head>
 
-<body class="bg-white text-slate-800 antialiased selection:bg-cyan-100 selection:text-slate-950">
+<body class="text-slate-800 antialiased selection:bg-teal-100 selection:text-slate-950">
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-slate-950 focus:shadow-lg">Skip to content</a>
 
-  <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+  <header class="sticky top-0 z-40 border-b warm-border bg-[#fffdf8]/95 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
       <a href="#top" class="font-semibold tracking-tight text-slate-950">Toheeb B. Ibrahim</a>
       <button id="menuButton" type="button" class="rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium md:hidden" aria-controls="mobileMenu" aria-expanded="false">Menu</button>
@@ -103,8 +128,8 @@
   </header>
 
   <main id="main">
-    <section id="top" class="relative overflow-hidden bg-slate-950 text-white">
-      <div class="absolute inset-0 opacity-30" aria-hidden="true" style="background-image: radial-gradient(circle at 85% 15%, #06b6d4 0, transparent 28%), radial-gradient(circle at 10% 90%, #1d4ed8 0, transparent 25%);"></div>
+    <section id="top" class="hero-surface relative overflow-hidden text-white">
+      <div class="absolute inset-0 opacity-30" aria-hidden="true" style="background-image: radial-gradient(circle at 86% 13%, #f2b66d 0, transparent 28%), radial-gradient(circle at 8% 92%, #0f766e 0, transparent 30%);"></div>
       <div class="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-[240px,1fr] md:items-center md:py-24">
         <div class="relative mx-auto w-56 md:mx-0">
           <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-3xl border border-cyan-400/50" aria-hidden="true"></div>
@@ -115,9 +140,9 @@
         </div>
 
         <div>
-          <p class="eyebrow text-xs font-semibold uppercase text-cyan-300">Applied Mathematics · Control · Scientific Computing</p>
-          <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">Mathematical models for industrial and complex systems</h1>
-          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300">I am an Applied Mathematics PhD researcher at Bowling Green State University. My work connects first-principles modeling, neural ODEs, state estimation, optimization, and feedback control to industrial glass-melting systems and other real-world problems.</p>
+          <p class="eyebrow text-xs font-semibold uppercase text-teal-200">Applied mathematician · Modeler · Educator</p>
+          <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">Hi, I’m Toheeb. I use mathematics to make complex systems easier to understand and control.</h1>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-200">I am an Applied Mathematics PhD researcher at Bowling Green State University. I enjoy turning physical insight, data, and computation into practical models for industrial glass-melting systems and other real-world problems.</p>
           <div class="mt-6 flex flex-wrap gap-2 text-sm text-slate-200">
             <span class="rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1">Industrial modeling</span>
             <span class="rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1">PID &amp; LQR control</span>
@@ -125,7 +150,7 @@
             <span class="rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1">Python · MATLAB · R</span>
           </div>
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#contact" class="rounded-xl bg-cyan-500 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300">Get in touch</a>
+            <a href="#contact" class="rounded-xl bg-[#f2b66d] px-5 py-3 font-semibold text-slate-950 transition hover:bg-[#ffd18e]">Let’s connect</a>
             <a href="./new_resume-2.pdf" class="rounded-xl border border-slate-600 px-5 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200">Download CV</a>
             <a href="https://github.com/teetopest" class="rounded-xl border border-slate-600 px-5 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200">View GitHub</a>
           </div>
@@ -137,14 +162,15 @@
       <div class="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.3fr,0.7fr]">
         <div>
           <p class="eyebrow text-xs font-semibold uppercase text-cyan-700">About</p>
-          <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">Researcher, modeler, and educator</h2>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">I like working where equations meet real decisions</h2>
           <div class="mt-5 space-y-4 leading-7 text-slate-600">
-            <p>My research spans mathematical modeling, control systems, numerical analysis, physics-informed machine learning, mathematical biology, and quantitative analysis. I am especially interested in translating high-fidelity physical descriptions into models that can support estimation, control, and operational decisions.</p>
-            <p>My academic path across Nigeria, Cameroon, Italy, Poland, Germany, and the United States has prepared me to work across mathematical, engineering, and scientific disciplines. I have also taught college algebra, calculus, and dynamical-systems modeling.</p>
+            <p>My research brings together mathematical modeling, control systems, numerical analysis, and physics-informed machine learning. I am especially interested in turning detailed physical descriptions into models that engineers can use for estimation, control, and day-to-day decisions.</p>
+            <p>What I enjoy most is the collaborative part of the work: learning which constraints matter in practice, translating them into mathematics, and explaining the results clearly to people with different technical backgrounds.</p>
+            <p>My academic path across Nigeria, Cameroon, Italy, Poland, Germany, and the United States has shaped how I approach problems and people. Along the way, I have also taught college algebra, calculus, and dynamical-systems modeling.</p>
           </div>
         </div>
-        <aside class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <h3 class="font-semibold text-slate-950">Current focus</h3>
+        <aside class="paper-surface soft-shadow rounded-2xl border warm-border p-6">
+          <h3 class="font-semibold text-slate-950">A quick snapshot</h3>
           <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-600">
             <li><span class="font-semibold text-slate-800">Role:</span> Research Assistant, College of Engineering, BGSU</li>
             <li><span class="font-semibold text-slate-800">Domain:</span> Industrial glass-melting furnaces</li>
@@ -156,7 +182,7 @@
       </div>
     </section>
 
-    <section id="expertise" class="bg-slate-50">
+    <section id="expertise" class="sage-surface">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <p class="eyebrow text-xs font-semibold uppercase text-cyan-700">Expertise</p>
         <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">Technical strengths</h2>
@@ -268,7 +294,7 @@
       </div>
     </section>
 
-    <section id="research" class="bg-slate-50">
+    <section id="research" class="sage-surface">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <p class="eyebrow text-xs font-semibold uppercase text-cyan-700">Research</p>
         <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">Selected research projects</h2>
@@ -347,6 +373,11 @@
           <div>
             <h3 class="text-xl font-semibold text-slate-950">Selected presentations</h3>
             <ul class="mt-5 space-y-4 text-sm leading-6 text-slate-600">
+              <li id="gmic-presentation" class="border-l-2 border-cyan-500 pl-4">
+                <span class="font-semibold text-slate-900">Semiphysical modeling and sensorless control of industrial glass melting processes</span><br />
+                Glass Manufacturing Industry Council (GMIC) Glass Problems Conference · Poster presentation · Toledo, Ohio · 2026
+                <p class="mt-2 text-slate-600">Presented a hybrid Neural ODE and observer-based control framework that estimates seven furnace states from existing measurements and adjusts batch charging to support pull-rate tracking and molten-glass inventory regulation.</p>
+              </li>
               <li class="border-l-2 border-cyan-500 pl-4"><span class="font-semibold text-slate-900">Sustaining efficient malaria vector control while accounting for breeding-site stages</span><br />American Society of Tropical Medicine annual meeting, 2021</li>
               <li class="border-l-2 border-cyan-500 pl-4"><span class="font-semibold text-slate-900">Mathematical modeling of <em>Anopheles</em> mosquitoes’ breeding sites to sustain efficient vector control</span><br />American Society of Tropical Medicine annual meeting, 2020</li>
               <li class="border-l-2 border-cyan-500 pl-4"><span class="font-semibold text-slate-900">Is increased mortality by multiple exposures to COVID-19 an overseen factor when aiming for herd immunity?</span><br />Mathematical Epidemiology Conference, York University, 2021</li>
@@ -356,7 +387,7 @@
       </div>
     </section>
 
-    <section id="education" class="bg-slate-50">
+    <section id="education" class="sage-surface">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <p class="eyebrow text-xs font-semibold uppercase text-cyan-700">Education</p>
         <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">Academic background</h2>
@@ -443,7 +474,7 @@
       </div>
     </section>
 
-    <section id="service" class="bg-slate-50">
+    <section id="service" class="sage-surface">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <p class="eyebrow text-xs font-semibold uppercase text-cyan-700">Leadership &amp; service</p>
         <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">Contributions beyond research</h2>
@@ -472,7 +503,7 @@
       </div>
     </section>
 
-    <section id="contact" class="bg-slate-950 text-white">
+    <section id="contact" class="hero-surface text-white">
       <div class="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr,0.8fr] lg:items-end">
         <div>
           <p class="eyebrow text-xs font-semibold uppercase text-cyan-300">Contact</p>
@@ -488,7 +519,7 @@
     </section>
   </main>
 
-  <footer class="border-t border-slate-800 bg-slate-950 text-slate-400">
+  <footer class="border-t border-slate-700 bg-[#10292f] text-slate-400">
     <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6">
       <p>© <span id="year"></span> Toheeb Babatunde Ibrahim</p>
       <p>Applied mathematics for real-world systems.</p>
